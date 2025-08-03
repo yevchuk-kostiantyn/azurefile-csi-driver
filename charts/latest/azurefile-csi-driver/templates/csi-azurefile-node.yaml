@@ -96,7 +96,7 @@ spec:
               value: "{{ .Values.linux.kubelet }}"
             - name: MIGRATE_K8S_REPO
               value: "{{ .Values.node.azurefileProxy.migrateK8sRepo }}"
-            - name: SETUP_MI_AUTH
+            - name: ENABLE_MI_AUTH
               value: "{{ .Values.node.enableManagedIdentityAuth }}"
           volumeMounts:
             - name: host-usr
