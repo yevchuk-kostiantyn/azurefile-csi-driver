@@ -22,8 +22,8 @@ ARG ARCH
 
 RUN apt update \
     && apt install -y curl \
-    && curl -Ls https://github.com/Azure/azure-storage-azcopy/releases/download/v10.30.0/azcopy_linux_${ARCH}_10.30.0.tar.gz \
     && curl -Lso /tmp/azfilesauth_amd64.deb https://raw.githubusercontent.com/andyzhangx/demo/refs/heads/master/aks/azfilesauth_1.0-4_${ARCH}.deb \
+    && curl -Ls https://github.com/Azure/azure-storage-azcopy/releases/download/v10.30.0/azcopy_linux_${ARCH}_10.30.0.tar.gz \
         | tar xvzf - --strip-components=1 -C /usr/local/bin/ --wildcards "*/azcopy"
 
 FROM base
